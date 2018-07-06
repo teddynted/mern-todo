@@ -1,0 +1,144 @@
+::-webkit-input-placeholder { 
+  font-style: italic;
+}
+
+::-moz-placeholder { 
+  font-style: italic;
+}
+
+:-ms-input-placeholder { 
+  font-style: italic;
+}
+
+:-moz-placeholder { 
+  font-style: italic;
+}
+
+*:focus {
+  outline: none !important;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+@mixin display-flex() {
+   display: flex;
+   display: -ms-flex;
+   display: -webkit-flex;
+   display: -moz-flex;
+   display: -o-flex;
+}
+
+@mixin flex-wrap( $wrap ) {
+   flex-wrap: $wrap;
+   -webkit-flex-wrap: $wrap;
+   -ms-flex-wrap: $wrap;
+   -moz-flex-wrap: $wrap;
+   -o-flex-wrap: $wrap;
+}
+
+@mixin flex-direction( $direction ) {
+   flex-direction: $direction;
+   -ms-flex-direction: $direction;
+   -webkit-flex-direction: $direction;
+   -moz-flex-direction: $direction;
+   -o-flex-direction: $direction; 
+}
+
+@mixin align-items( $alignment ) {
+   align-items: $alignment; 
+   -ms-align-items: $alignment;
+   -webkit-align-items: $alignment;
+   -moz-align-items: $alignment;
+   -o-align-items: $alignment;
+}
+
+@mixin border-radius( $radius ) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   -ms-border-radius: $radius;
+   -o-border-radius: $radius;
+   border-radius: $radius;
+}
+
+#todoFrm {
+  margin-top: 15px;
+}
+
+#todoText {
+  padding: 30px 30px 30px 10px;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+#todos-not-found {
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.row.todo-flex {
+   @include display-flex;
+   @include flex-wrap(wrap);
+   @include align-items(center);
+}
+
+.row.todo-flex > [class*='col-'] {
+   @include display-flex;
+   @include flex-direction(column); 
+}
+
+.row.todo-flex {
+   @include display-flex;
+   @include flex-wrap(wrap);
+   @include align-items(center);
+}
+
+.row.todo-flex > [class*='col-'] {
+   @include display-flex;
+   @include flex-direction(column); 
+}
+
+.todo-item,
+.my-badge {
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.my-badge {
+  color: #fff;
+  background: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.fa-circle-o:hover {
+  color: #28a745!important
+}
+
+.fa-check-circle {
+  color: #28a745!important; 
+}
+
+.trash {
+  color: #D24D57;
+}
+
+.strike-through {
+   color: #ccc !important;
+}
+
+span.strike-through {
+   display: inline-block;
+   position: relative;
+}
+
+span.strike-through span {
+   height: 1px;
+   width: 100px;
+   color: #fbfbfb;
+   position: absolute;
+   width: 100%;
+   top: 50%;
+   left: 0;
+}
