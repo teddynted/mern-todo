@@ -16,8 +16,8 @@ class ToDo extends Component {
          this.props.addTodo({ 'task' : e.target.value });
          this.getAList();
          e.target.value = '';
+         e.preventDefault();
      }
-     e.preventDefault();
    };
    async getAList() {
      let results = await this.props.listTodos();
