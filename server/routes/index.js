@@ -19,7 +19,6 @@ router.post("/create", asyncMiddleware( async ( req, res, next ) => {
      
 /* Update a todo */
 router.put('/update', asyncMiddleware( async ( req, res, next ) => {
-    console.log(req.body.params._id);
     res.json(await toDo.findOneAndUpdate({ _id: req.body.params._id }, { $set: { status: req.body.params.status } }, { new: true }));
 }));
 

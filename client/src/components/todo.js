@@ -11,6 +11,9 @@ class ToDo extends Component {
    componentDidMount(){
      this.getAList();
    };
+   // componentDidUpdate(prevProps, prevState){
+   //    console.log(this.state.list);
+   // };
    handleKeyPress = (e) => {
      if( e.key === 'Enter' && e.target.value !== '' ) {
          this.props.addTodo({ 'task' : e.target.value });
@@ -21,9 +24,7 @@ class ToDo extends Component {
    };
    async getAList() {
      let results = await this.props.listTodos();
-     this.setState((prevState, props) => {
-        return { list: results.payload.data };
-     });
+     this.setState({ list: results.payload.data });
    };
    DeleteTodo = (e) => {
       this.props.deleteTodo(e.target.id);
