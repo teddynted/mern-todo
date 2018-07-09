@@ -11,16 +11,13 @@ class ToDo extends Component {
    componentDidMount(){
      this.getAList();
    };
-   // componentDidUpdate(prevProps, prevState){
-   //    console.log(this.state.list);
-   // };
    handleKeyPress = (e) => {
      if( e.key === 'Enter' && e.target.value !== '' ) {
          this.props.addTodo({ 'task' : e.target.value });
          this.getAList();
          e.target.value = '';
-         e.preventDefault();
      }
+     e.preventDefault();
    };
    async getAList() {
      let results = await this.props.listTodos();
