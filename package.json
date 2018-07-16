@@ -7,7 +7,7 @@
     "client": "cd client && yarn start",
     "server": "cd server && yarn dev",
     "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
     "concurrently": "^3.6.0"
