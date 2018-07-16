@@ -9,6 +9,7 @@
     "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "dependencies": {
-    "concurrently": "^3.6.0"
+    "concurrently": "^3.6.0",
+    "express": "^4.16.3"
   }
 }
