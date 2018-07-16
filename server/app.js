@@ -8,7 +8,8 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-var mongoURL = 'mongodb://localhost/todo';
+//var mongoURL = 'mongodb://localhost/todo';
+var mongoURL = 'mongodb://heroku_62vkwwg1:np7qvrhqc6nfetk46kl2ejfhd4@ds239681.mlab.com:39681/heroku_62vkwwg1';
 
 var http = require('http');
 
