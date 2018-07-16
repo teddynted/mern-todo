@@ -5,11 +5,15 @@
   "license": "MIT",
   "scripts": {
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "cd server && yarn start",
+    "start": "cd server && node ./bin/www",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "dependencies": {
     "concurrently": "^3.6.0",
-    "express": "^4.16.3"
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.4",
+    "morgan": "^1.9.0"
   }
 }
